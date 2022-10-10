@@ -4,14 +4,14 @@ import Logo from '../../images/logo.png';
 
 const Header = () => {
   return (
-    <div className='flex justify-between items-center w-11/12 mx-auto bg-white shadow-lg py-1 px-2 mt-2 rounded-lg'>
+    <div className='flex flex-col md:flex-row justify-between items-center w-11/12 mx-auto bg-white shadow-lg py-1 px-2 mt-2 rounded-lg'>
       <div className='w-12'>
-        <Link className='flex items-center'>
+        <Link className='flex justify-center md:justify-start items-center'>
           <img src={Logo} alt="Brand Logo" />
           <h1 className='text-3xl font-bold text-blue-500'>QuizKit</h1>
         </Link>
       </div>
-      <div className='text-md'>
+      <div className='text-md py-4 md:py-0'>
         <Link className='mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/home'>Home</Link>
         <Link className='mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/topics'>Topics</Link>
         <Link className='mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/staticts'>Staticts</Link>
