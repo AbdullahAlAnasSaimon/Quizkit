@@ -55,6 +55,7 @@ const Question = ({ questionObj }) => {
           ></Option>)
         }
         <div className={`mx-8 mt-8 ${show ? show : 'p-4'} bg-green-300 rounded-lg`}>
+          {show ? show : <span className='font-semibold'>Correct Answer : </span>}
           {show ? show : correctAnswer}
         </div>
       </div>
