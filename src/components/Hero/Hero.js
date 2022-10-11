@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
       </div>
       <div className='w-full md:w-6/12 flex justify-end'>
-        <img className='w-auto md:w-9/12' src={HeroImg} alt="" />
+        <img className='w-auto md:w-11/12' src={HeroImg} alt="" />
       </div>
     </div>
   );
