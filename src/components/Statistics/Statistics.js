@@ -67,7 +67,7 @@ const Statistics = () => {
           y={ey}
           textAnchor={textAnchor}
           fill="#333"
-        >{`Total Quiz ${value}`}</text>
+        >{`Quiz ${value}`}</text>
         <text
           x={ex + (cos >= 0 ? 1 : -1) * 12}
           y={ey}
@@ -90,9 +90,9 @@ const Statistics = () => {
   );
 
   return (
-    <div className='w-10/12 mx-auto'>
-      <h2>Statistics</h2>
-      <div className='flex justify-between'>
+    <div className='w-10/12 mx-auto z-0'>
+      <h2 className='text-center my-10 text-4xl font-semibold'>Statistics</h2>
+      <div className='flex flex-col md:flex-row justify-between items-center overflow-hidden'>
         <LineChart width={500} height={400} data={data}>
           <Line type='monotone' dataKey="total" stroke='#82ca9d' />
           <CartesianGrid strokeDasharray="3 3" />
@@ -102,7 +102,8 @@ const Statistics = () => {
           <Legend />
         </LineChart>
 
-        <PieChart width={500} height={400}>
+        <div>
+        <PieChart width={400} height={400}>
           <Pie
             activeIndex={activeIndex}
             activeShape={renderActiveShape}
@@ -111,11 +112,13 @@ const Statistics = () => {
             cy={200}
             innerRadius={60}
             outerRadius={80}
-            fill="#8884d8"
+            fill="#2563eb"
             dataKey="total"
             onMouseEnter={onPieEnter}
+            className='mx-auto'
           />
         </PieChart>
+        </div>
       </div>
     </div>
   );
