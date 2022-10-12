@@ -1,6 +1,6 @@
 # Quiz Kit
 
-## Live Site Link:  [QuizKit](https://duckduckgo.com).
+## Live Site Link:  [QuizKit](https://quizkit.netlify.app/).
 
 ## Description:
 

@@ -12,10 +12,10 @@ const Header = () => {
         </Link>
       </div>
       <div className='text-md py-4 md:py-0'>
-        <Link className='mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/home'>Home</Link>
-        <Link className='mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/quizes'>Quizes</Link>
-        <Link className='mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/statistics'>Statistics</Link>
-        <Link className='mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/blog'>Blog</Link>
+        <Link className='mx-0 md:mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/home'>Home</Link>
+        <Link className='mx-0 md:mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/quizes'>Quizes</Link>
+        <Link className='mx-0 md:mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/statistics'>Statistics</Link>
+        <Link className='mx-0 md:mx-2 px-3 py-2 text-blue-500 font-medium hover:bg-blue-50 rounded-md duration-300 ease-in-out	' to='/blog'>Blog</Link>
       </div>
     </div>
   );

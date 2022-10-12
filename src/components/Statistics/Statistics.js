@@ -1,6 +1,6 @@
-import React, {  useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { PieChart, Pie, Sector, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { PieChart, Pie, Sector, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
 
 const Statistics = () => {
@@ -90,18 +90,21 @@ const Statistics = () => {
   );
 
   return (
-    <div className='w-10/12 mx-auto z-0'>
+    <div className='w-auto mx-auto z-0'>
       <h2 className='text-center my-10 text-4xl font-bold text-gray-800'>Statistics</h2>
-      <div className='flex flex-col md:flex-row justify-between items-center overflow-hidden'>
-        <LineChart width={500} height={400} data={data}>
-          <Line type='monotone' dataKey="total" stroke='#2563eb' />
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-        </LineChart>
-
+      <div className='w-10/12 mx-auto flex flex-col md:flex-row justify-between items-center overflow-hidden'>
+        <div className='-ml-10 md:ml-0 w-full md:w-6/12 h-80'>
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={data}>
+            <Line type='monotone' dataKey="total" stroke='#2563eb' />
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+          </LineChart>
+        </ResponsiveContainer>
+        </div>
         <PieChart width={400} height={400}>
           <Pie
             activeIndex={activeIndex}

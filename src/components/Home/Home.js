@@ -5,7 +5,6 @@ import Quizes from '../Quizes/Quizes';
 
 const Home = () => {
   const quizes = useLoaderData();
-  // console.log(topics.data);
   return (
     <div>
       <Hero></Hero>

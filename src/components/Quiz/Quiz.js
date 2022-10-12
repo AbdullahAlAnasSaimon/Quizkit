@@ -69,8 +69,10 @@ const Question = ({ questionObj }) => {
 const Option = ({ option, correctAnswer }) => {
 
   const handleButtonClick = (event) => {
+
     const questionInnerText = event.target.innerText.trim();
     const correctAnswer2 = correctAnswer.replace(/\s+/g, ' ').trim();
+
     if (questionInnerText === correctAnswer2) {
       event.target.classList.add('bg-green-300');
       event.target.classList.remove('bg-slate-100');
@@ -85,7 +87,9 @@ const Option = ({ option, correctAnswer }) => {
         theme: "light",
       });
       notify();
-    } else {
+    } 
+
+    else {
       event.target.classList.add('bg-red-300');
       event.target.classList.remove('bg-slate-100');
       const notify = () => toast.error('Wrong Answer!', {
@@ -105,7 +109,7 @@ const Option = ({ option, correctAnswer }) => {
   return (
     <div className='my-2 rounded-md overflow-hidden'>
       <button id='quiz-btn' onClick={handleButtonClick} className='text-left mx-4 md:mx-8 p-2 bg-slate-100 w-11/12 md:w-11/12 rounded-md'>
-        {option.trim()}
+        {option}
       </button>
     </div>
   );
