@@ -24,11 +24,11 @@ const Quizes = ({ quizkit }) => {
 const Quiz = ({ quiz }) => {
   const { id, name, logo, total } = quiz;
   return (
-    <div className='flex justify-between m-5 p-4 border-2 border-blue-200 shadow-lg rounded-lg'>
+    <div className='flex justify-between m-5 p-4 bg-blue-50 border-2 border-blue-100 rounded-lg'>
       <div>
-        <h2 className='text-3xl font-semibold my-2'>{name}</h2>
-        <p className='my-2'>Total Quiz: {total}</p>
-        <Link to={`/quizes/${id}`} className='py-1 px-3 bg-blue-400 inline-block rounded-md hover:bg-blue-500'>Start Quiz &rarr;</Link>
+        <h2 className='text-3xl font-semibold'>{name}</h2>
+        <p className='my-2 text-sm'>Total Quiz: {total}</p>
+        <Link to={`/quizes/${id}`} className='mt-2 py-1 px-3 bg-blue-600 text-white inline-block rounded-md hover:bg-blue-500'>Start Quiz &rarr;</Link>
       </div>
       <div className='w-28 bg-slate-800 rounded-lg'>
         <img className='rounded-lg h-full' src={logo} alt="" />

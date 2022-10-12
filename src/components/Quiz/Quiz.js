@@ -15,7 +15,7 @@ const Quiz = () => {
     <div>
       <h2 className='text-4xl text-center font-semibold my-5'>{name} Quizes</h2>
       <p className='text-center my-5'>Total Quiz : {total}</p>
-      <div className='w-8/12 mx-auto'>
+      <div className='w-11/12 md:w-8/12 mx-auto'>
         {
           questions.map(question => <Question
             key={question.id}
@@ -43,7 +43,7 @@ const Question = ({ questionObj }) => {
     <div>
       <div className='my-10 border-2 border-blue-300 rounded-lg py-4'>
         <div className='flex justify-between items-center w-11/12 mx-auto mt-4 mb-6'>
-          <div className='text-2xl font-semibold w-11/12'>{questions}</div>
+          <div className='text-lg md:text-2xl font-semibold w-11/12'>{questions}</div>
           <button onClick={toggleShow}>
             <FontAwesomeIcon icon={show ? faEye : faEyeSlash} className="p-2 bg-gray-100 hover:bg-slate-200 rounded-full"></FontAwesomeIcon>
           </button>
@@ -104,7 +104,7 @@ const Option = ({ option, correctAnswer }) => {
 
   return (
     <div className='my-2 rounded-md overflow-hidden'>
-      <button id='quiz-btn' onClick={handleButtonClick} className='text-left mx-8 p-2 bg-slate-100 w-11/12 rounded-md'>
+      <button id='quiz-btn' onClick={handleButtonClick} className='text-left mx-4 md:mx-8 p-2 bg-slate-100 w-11/12 md:w-11/12 rounded-md'>
         {option.trim()}
       </button>
     </div>
