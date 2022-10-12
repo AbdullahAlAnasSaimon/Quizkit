@@ -9,7 +9,7 @@ const Quizes = ({ quizkit }) => {
   else{
     return (
       <div className='w-10/12 mx-auto'>
-        <h1 className='text-4xl font-bold text-center my-5'>Start Quizzes</h1>
+        <h1 className='text-4xl font-bold text-center my-10 text-gray-800'>Start Quizzes</h1>
         <div className='grid grid-cols-1 md:grid-cols-2'>
           {
             quizes.data.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
@@ -28,7 +28,7 @@ const Quiz = ({ quiz }) => {
       <div>
         <h2 className='text-3xl font-semibold'>{name}</h2>
         <p className='my-2 text-sm'>Total Quiz: {total}</p>
-        <Link to={`/quizes/${id}`} className='mt-2 py-1 px-3 bg-blue-600 text-white inline-block rounded-md hover:bg-blue-500'>Start Quiz &rarr;</Link>
+        <Link to={`/quizes/${id}`} className='mt-2 py-1 px-3 bg-blue-600 text-white inline-block rounded-md hover:bg-blue-500 duration-200 ease-in-out'>Start Quiz &rarr;</Link>
       </div>
       <div className='w-28 bg-slate-800 rounded-lg'>
         <img className='rounded-lg h-full' src={logo} alt="" />

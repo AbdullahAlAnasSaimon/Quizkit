@@ -91,7 +91,7 @@ const Statistics = () => {
 
   return (
     <div className='w-10/12 mx-auto z-0'>
-      <h2 className='text-center my-10 text-4xl font-semibold'>Statistics</h2>
+      <h2 className='text-center my-10 text-4xl font-bold text-gray-800'>Statistics</h2>
       <div className='flex flex-col md:flex-row justify-between items-center overflow-hidden'>
         <LineChart width={500} height={400} data={data}>
           <Line type='monotone' dataKey="total" stroke='#2563eb' />
