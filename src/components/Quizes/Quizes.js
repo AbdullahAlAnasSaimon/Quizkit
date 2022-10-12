@@ -12,7 +12,7 @@ const Quizes = ({ quizkit }) => {
         <h1 className='text-4xl font-bold text-center my-5'>Start Quizzes</h1>
         <div className='grid grid-cols-1 md:grid-cols-2'>
           {
-            quizes.data.map(quiz => <Topic key={quiz.id} topic={quiz}></Topic>)
+            quizes.data.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
           }
         </div>
       </div>
@@ -21,7 +21,7 @@ const Quizes = ({ quizkit }) => {
   
 };
 
-const Topic = ({ topic: quiz }) => {
+const Quiz = ({ quiz }) => {
   const { id, name, logo, total } = quiz;
   return (
     <div className='flex justify-between m-5 p-4 border-2 border-blue-200 shadow-lg rounded-lg'>

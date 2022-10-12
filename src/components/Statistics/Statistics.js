@@ -1,4 +1,4 @@
-import React, { PureComponent, useCallback, useState } from 'react';
+import React, {  useCallback, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { PieChart, Pie, Sector, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
@@ -94,7 +94,7 @@ const Statistics = () => {
       <h2 className='text-center my-10 text-4xl font-semibold'>Statistics</h2>
       <div className='flex flex-col md:flex-row justify-between items-center overflow-hidden'>
         <LineChart width={500} height={400} data={data}>
-          <Line type='monotone' dataKey="total" stroke='#82ca9d' />
+          <Line type='monotone' dataKey="total" stroke='#2563eb' />
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
@@ -102,7 +102,6 @@ const Statistics = () => {
           <Legend />
         </LineChart>
 
-        <div>
         <PieChart width={400} height={400}>
           <Pie
             activeIndex={activeIndex}
@@ -118,7 +117,6 @@ const Statistics = () => {
             className='mx-auto'
           />
         </PieChart>
-        </div>
       </div>
     </div>
   );

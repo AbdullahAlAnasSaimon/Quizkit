@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Quiz = () => {
+  window.scrollTo(0, 0);
   const quizkit = useLoaderData();
   const { name, total, questions } = quizkit.data;
 
@@ -70,7 +71,6 @@ const Option = ({ option, correctAnswer }) => {
   const handleButtonClick = (event) => {
     const questionInnerText = event.target.innerText.trim();
     const correctAnswer2 = correctAnswer.replace(/\s+/g, ' ').trim();
-    // console.log(questionInnerText, correctAnswer2);
     if (questionInnerText === correctAnswer2) {
       event.target.classList.add('bg-green-300');
       event.target.classList.remove('bg-slate-100');
